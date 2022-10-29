@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="music website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0," />
+    <meta name="theme-color" content="#000000" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/landing pix/Flixia logo (1).PNG" />
+    <meta name="keyword" content="HTML,CSS" />
+    <link rel="stylesheet" type="text/css" href="/index.css" />
+    <title>Flixia Music website</title>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="navbar">
+            <img src="/ppp/Flixia logo (1).PNG" alt="logo">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">NEW SONG</a></li>
+                <li><a href="#">ALBUM</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1>THE <br> MAGNATE <br> MUSIC</h1>
+
+                <div class="right">
+                    <p>Click To Play</p>
+                    <img src="/ppp/118621_play_icon.png" id="icon">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <audio id="mysong">
+            <source src="/music/Mohbad-Peace-(TrendyBeatz.com).mp3" type="audio/mp3">
+        </audio>
+        <video id="myvideo" controls autoplay>
+            <source src="vid\Mohbad-Peace-Video-(TrendyBeatz.com).mp4" type="video/mp4">
+        </video>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/-b6pKbo9Olk" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+    </div>
+
+
+    <script>
+        var mysong = document.getElementById("mysong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            if (mysong.paused) {
+                mysong.play();
+                icon.scr = "landing pix\118621_play_icon.png";
+            } else if (mysong.play) {
+                mysong.pause();
+                icon.src = "landing pix\118621_pause_icon.png";
+            } else {
+                mysong.restart();
+            }
+        }
+
+        /*var mysong = document.getElementById("myvideo");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function () {
+            if (myvideo.paused) {
+                myvideo.play();
+                icon.scr = "ppp\118621_play_icon.png";
+            } else if (myvideo.play) {
+                myvideo.pause();
+                icon.src = "ppp\pause.png";
+            } else {
+                myvideo.restart();
+            }
+        }*/
+
+
+
+
+
+    </script>
+    <div class="Return">
+        <a href="LES.html">Return</a>
+    </div>
+</body>
+
+
+</html>
